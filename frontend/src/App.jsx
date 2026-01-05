@@ -188,7 +188,7 @@ const TeacherDatabase = () => {
             <div className="flex-shrink-0">
                <div className="w-32 h-32 md:w-44 md:h-44 rounded-full border-4 border-blue-500 p-1 shadow-2xl overflow-hidden bg-gray-800">
                   <img 
-                    src="/my-pic.jpg" 
+                    src="/images/my-pic.jpg" 
                     alt="Abdur Rahim" 
                     className="w-full h-full rounded-full object-cover"
                     onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=AR"; }}
