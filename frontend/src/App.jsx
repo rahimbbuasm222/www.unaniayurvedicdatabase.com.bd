@@ -179,19 +179,19 @@ const TeacherDatabase = () => {
           </div>
         </div>
 
-        {/* --- PROFESSIONAL FOOTER WITH SMALLER PHOTO --- */}
+        {/* --- PROFESSIONAL FOOTER WITH 30PX PHOTO --- */}
         <footer className="bg-gray-900 text-white p-8 md:p-12 mt-16 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-900 opacity-10 rounded-full -mr-32 -mt-32"></div>
           
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 relative z-10">
-            {/* Your Picture Section (Resized to Small) */}
+            {/* Your Picture Section (Fixed to 30px) */}
             <div className="flex-shrink-0">
-               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-blue-500 p-0.5 shadow-xl overflow-hidden bg-gray-800">
+               <div style={{ width: '30px', height: '30px' }} className="rounded-full border border-blue-500 overflow-hidden bg-gray-800">
                   <img 
                     src="/images/my-pic.jpg" 
                     alt="Abdur Rahim" 
-                    className="w-full h-full rounded-full object-cover"
-                    onError={(e) => { e.target.src = "https://via.placeholder.com/150?text=AR"; }}
+                    style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }}
+                    onError={(e) => { e.target.src = "https://via.placeholder.com/30?text=AR"; }}
                   />
                </div>
             </div>
@@ -209,15 +209,15 @@ const TeacherDatabase = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-gray-800 px-4 py-2 rounded-lg border border-gray-700">
                   <span className="text-blue-400">✉️</span>
-                  <span className="font-mono text-gray-200 uppercase">rahimbbuasm222@gmail.com</span>
+                  <span className="font-mono uppercase text-xs">rahimbbuasm222@gmail.com</span>
                 </div>
               </div>
             </div>
 
             <div className="text-center md:text-right bg-blue-900 bg-opacity-20 p-6 rounded-2xl border border-blue-800 max-w-xs">
-               <h4 className="text-blue-400 font-bold uppercase text-xs mb-3 tracking-widest">Digital Vision</h4>
-               <p className="text-sm text-gray-300 leading-relaxed italic">
-                 "আমি বিশ্বাস করি ইউনানি ও আয়ুর্বেদিক শিক্ষা ব্যবস্থাকে অটোমেশনের মাধ্যমে স্মার্ট বাংলাদেশের সাথে যুক্ত করা সম্ভব। আমার এই ডিজিটাল ডাটাবেজ সলিউশন ইএফটি (EFT) এবং আইবাস (iBAS++) ব্যবস্থাপনাকে করবে নির্ভুল।"
+               <h4 className="text-blue-400 font-bold uppercase text-[10px] mb-3 tracking-widest">Digital Vision</h4>
+               <p className="text-xs text-gray-300 leading-relaxed italic">
+                 "ইউনানি ও আয়ুর্বেদিক শিক্ষা ব্যবস্থাকে স্মার্ট প্রযুক্তির মাধ্যমে অটোমেশন করাই আমার লক্ষ্য।"
                </p>
             </div>
           </div>
@@ -240,15 +240,11 @@ const TeacherDatabase = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
                   <div className="space-y-3">
                     <p className="flex justify-between border-b pb-1"><span>নাম (বাংলা):</span> <span className="font-bold">{selectedTeacher.nameBn}</span></p>
-                    <p className="flex justify-between border-b pb-1"><span>পিতার নাম:</span> <span className="font-bold">{selectedTeacher.fatherName}</span></p>
                     <p className="flex justify-between border-b pb-1"><span>এনআইডি:</span> <span className="font-bold text-blue-700">{selectedTeacher.nid}</span></p>
-                    <p className="flex flex-col border-b pb-1"><span>বর্তমান ঠিকানা:</span> <span className="font-bold">{selectedTeacher.presentAddr}</span></p>
                   </div>
                   <div className="space-y-3">
                     <p className="flex justify-between border-b pb-1"><span>পদবী:</span> <span className="font-bold">{selectedTeacher.designation}</span></p>
-                    <p className="flex justify-between border-b pb-1"><span>বেতন:</span> <span className="font-bold text-green-700">{selectedTeacher.basicPay} ৳</span></p>
                     <p className="flex justify-between border-b pb-1"><span>আইবাস আইডি:</span> <span className="font-bold font-mono">{selectedTeacher.ibasId}</span></p>
-                    <p className="flex justify-between border-b pb-1"><span>ব্যাংক একাউন্ট:</span> <span className="font-bold">{selectedTeacher.bankAcc}</span></p>
                   </div>
                 </div>
                 <button onClick={() => setSelectedTeacher(null)} className="mt-12 w-full bg-blue-900 text-white py-4 rounded-2xl font-bold shadow-xl hover:bg-black transition">বন্ধ করুন</button>
