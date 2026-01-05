@@ -10,10 +10,10 @@ const TeacherDatabase = () => {
     firstJoinDate: '', currentPostDate: '', jobType: 'স্থায়ী', prlDate: '',
     initialPayScale: '', basicPay: '', incrementStep: '',
     bankAcc: '', bankName: '', branchName: '', routingNumber: '', incomeTax: '',
-    ibasId: '' // iBAS ID added as per previous requirement
+    ibasId: ''
   });
 
-  // আপনার রেন্ডার ব্যাকএন্ড লিঙ্ক
+  // রেন্ডার ব্যাকএন্ড লিঙ্ক
   const API_URL = "https://www-updatedunaniayurvedicdatabase-com-bd.onrender.com/api/teachers";
 
   const fetchTeachers = async () => {
@@ -63,7 +63,7 @@ const TeacherDatabase = () => {
             বাংলাদেশ বোর্ড অব ইউনানি অ্যান্ড আয়ুর্বেদিক সিস্টেম অব মেডিসিন 
           </h1>
           <h2 className="text-xl md:text-2xl font-semibold text-blue-200">এমপ্লয়ী / কলেজের শিক্ষক প্রোফাইল ডাটাবেস</h2>
-          <p className="text-blue-100 italic mt-2 opacity-80 underline">বোর্ড অনুমোদিত ডিজিটাল ডাটাবেস ফরম্যাট (Beta Version)</p>
+          <p className="text-blue-100 italic mt-2 opacity-80 underline">বোর্ড অনুমোদিত ডিজিটাল ডাটাবেস ফরম্যাট</p>
         </div>
 
         <div className="p-6">
@@ -142,7 +142,7 @@ const TeacherDatabase = () => {
             </button>
           </form>
 
-          {/* Teacher List Table */}
+          {/* সংরক্ষিত শিক্ষকদের তালিকা */}
           <div className="mt-20">
             <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
               <span className="bg-blue-900 w-2 h-8 mr-3 rounded-full"></span>
@@ -179,14 +179,14 @@ const TeacherDatabase = () => {
           </div>
         </div>
 
-        {/* --- PROFESSIONAL FOOTER WITH YOUR PHOTO & MARKETING WORDS --- */}
+        {/* --- PROFESSIONAL FOOTER WITH SMALLER PHOTO --- */}
         <footer className="bg-gray-900 text-white p-8 md:p-12 mt-16 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-blue-900 opacity-10 rounded-full -mr-32 -mt-32"></div>
           
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 relative z-10">
-            {/* Your Picture Section */}
+            {/* Your Picture Section (Resized to Small) */}
             <div className="flex-shrink-0">
-               <div className="w-32 h-32 md:w-44 md:h-44 rounded-full border-4 border-blue-500 p-1 shadow-2xl overflow-hidden bg-gray-800">
+               <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-2 border-blue-500 p-0.5 shadow-xl overflow-hidden bg-gray-800">
                   <img 
                     src="/images/my-pic.jpg" 
                     alt="Abdur Rahim" 
@@ -209,15 +209,15 @@ const TeacherDatabase = () => {
                 </div>
                 <div className="flex items-center gap-2 bg-gray-800 px-4 py-2 rounded-lg border border-gray-700">
                   <span className="text-blue-400">✉️</span>
-                  <span className="font-mono">rahimbbuasm222@gmail.com</span>
+                  <span className="font-mono text-gray-200 uppercase">rahimbbuasm222@gmail.com</span>
                 </div>
               </div>
             </div>
 
             <div className="text-center md:text-right bg-blue-900 bg-opacity-20 p-6 rounded-2xl border border-blue-800 max-w-xs">
-               <h4 className="text-blue-400 font-bold uppercase text-xs mb-3 tracking-widest">Marketing Vision</h4>
+               <h4 className="text-blue-400 font-bold uppercase text-xs mb-3 tracking-widest">Digital Vision</h4>
                <p className="text-sm text-gray-300 leading-relaxed italic">
-                 "আমি বিশ্বাস করি ইউনানি ও আয়ুর্বেদিক শিক্ষা ব্যবস্থাকে অটোমেশনের মাধ্যমে স্মার্ট বাংলাদেশের সাথে যুক্ত করা সম্ভব। আমার এই ডাটাবেজ সলিউশন ইএফটি (EFT) এবং আইবাস (iBAS++) ব্যবস্থাপনাকে করবে নির্ভুল ও গতিশীল।"
+                 "আমি বিশ্বাস করি ইউনানি ও আয়ুর্বেদিক শিক্ষা ব্যবস্থাকে অটোমেশনের মাধ্যমে স্মার্ট বাংলাদেশের সাথে যুক্ত করা সম্ভব। আমার এই ডিজিটাল ডাটাবেজ সলিউশন ইএফটি (EFT) এবং আইবাস (iBAS++) ব্যবস্থাপনাকে করবে নির্ভুল।"
                </p>
             </div>
           </div>
@@ -260,5 +260,4 @@ const TeacherDatabase = () => {
     </div>
   );
 };
-
 export default TeacherDatabase;
