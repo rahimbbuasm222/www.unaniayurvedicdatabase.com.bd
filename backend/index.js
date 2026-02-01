@@ -78,6 +78,25 @@ app.post('/api/teachers', async (req, res) => {
         res.status(400).json({ message: err.message });
     }
 });
+// ৪. ডাটা মুছে ফেলার জন্য (Delete)
+app.delete('/api/teachers/:id', async (req, res) => {
+    try {
+        await Teacher.findByIdAndDelete(req.params.id);
+        res.json({ message: "Deleted successfully" });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+// ৫. ডাটা আপডেট করার জন্য (Edit/Update)
+app.put('/api/teachers/:id', async (req, res) => {
+    try {
+        const updatedTeacher = await Teacher.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        res.json(updatedTeacher);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+});
 
 // ৪. সার্ভার পোর্ট সেটআপ (Render-এর জন্য পরিবর্তিত)
 const PORT = process.env.PORT || 5000;
