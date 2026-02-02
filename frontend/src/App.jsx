@@ -64,14 +64,14 @@ const TeacherDatabase = () => {
         
         {/* Header */}
         <div className="bg-blue-900 text-white py-10 px-6 text-center">
-          <h1 className="text-xl md:text-3xl font-bold uppercase">বাংলাদেশ বোর্ড অব ইউনানি অ্যান্ড আয়ুর্বেদিক সিস্টেম অব মেডিসিন</h1>
-          <p className="text-blue-200 mt-1 font-semibold uppercase">অফিশিয়াল এমপ্লয়ী ও শিক্ষক ডিজিটাল সার্ভিস রেকর্ড (১-১৯ পয়েন্ট)</p>
+          <h1 className="text-xl md:text-3xl font-bold uppercase">বাংলাদেশ বোর্ড অব ইউনানী এন্ড আয়ুর্বেদিক সিস্টেমস অব মেডিসিন</h1>
+          <p className="text-blue-200 mt-1 font-semibold uppercase">বেসরকারি ইউনানী/ আয়ুর্বেদিক কলেজসমূহে কর্মরত শিক্ষকবৃন্দের ডিজিটাল ডাটাবেজ (১-১৯ পয়েন্ট)</p>
         </div>
 
         <div className="p-4 md:p-8">
           {/* ১. পূর্ণাঙ্গ ইনপুট ফরম (এখানে ১৯টি ঘরই আছে) */}
           <form onSubmit={handleSubmit} className={`p-6 md:p-10 rounded-3xl border-2 shadow-inner transition-all mb-12 ${isEditing ? 'bg-green-50 border-green-200' : 'bg-blue-50 border-blue-100'}`}>
-            <h3 className="font-bold text-blue-900 border-b pb-4 mb-6 text-xl">{isEditing ? "📝 তথ্য সংশোধন করুন" : "➕ নতুন তথ্য ইনপুট ফরম (স্যারের ১৯টি পয়েন্ট)"}</h3>
+            <h3 className="font-bold text-blue-900 border-b pb-4 mb-6 text-xl">{isEditing ? "📝 তথ্য সংশোধন করুন" : "➕ নতুন তথ্য ইনপুট ফরম "}</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
                <div className="col-span-full font-bold text-blue-800 border-l-4 border-blue-900 pl-2 uppercase text-xs">১-৯: ব্যক্তিগত তথ্য</div>
